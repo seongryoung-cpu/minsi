@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+    --primary: 173 70% 51%;
+    --primary-foreground: 205 100% 14%;
+    --secondary: 205 100% 14%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 173 70% 95%;
+    --accent-foreground: 205 100% 14%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 173 70% 51%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 173 70% 51%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.3% 26.1%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 173 70% 51%;
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 210 40% 98%;
+    --card: 215 25% 13%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 25% 13%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 173 70% 51%;
+    --primary-foreground: 205 100% 14%;
+    --secondary: 215 25% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 16% 60%;
+    --accent: 215 25% 18%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 173 70% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: rgba(46, 213, 196, 0.2);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Pretendard', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: contain;
+  }
+}
+
+/* Safe area insets */
+:root {
+  --sat: env(safe-area-inset-top);
+  --sab: env(safe-area-inset-bottom);
+}
+
+.pb-safe {
+  padding-bottom: var(--sab);
+}
+
+.pt-safe {
+  padding-top: var(--sat);
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Touch-friendly sizes */
+@media (max-width: 768px) {
+  button, a[role="button"] {
+    min-height: 44px;
+  }
+}
