@@ -57,7 +57,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
     -webkit-tap-highlight-color: rgba(46, 213, 196, 0.2);
   }
 
