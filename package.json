@@ -10,6 +10,27 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    ...기존 내용 그대로...
+    "@supabase/supabase-js": "^2.49.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0",
+    "recharts": "^2.15.3",
+    "sonner": "^1.7.4",
+    "tailwind-merge": "^3.0.2",
+    "@radix-ui/react-slot": "^1.1.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/node": "^22.14.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "lovable-tagger": "^1.1.5",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.7.3",
+    "vite": "^6.3.5"
   }
 }
